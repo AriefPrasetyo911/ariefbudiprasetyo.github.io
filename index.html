@@ -643,6 +643,7 @@
       }).then(response => {
         if (response.ok) {
           status.innerHTML = "Thanks for your submission!";
+          window.location.href = response.next;
           form.reset()
         } else {
           response.json().then(data => {
