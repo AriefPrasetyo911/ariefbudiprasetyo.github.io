@@ -30,14 +30,15 @@
       $mail->isSMTP();
       $mail->Host = 'smtp.gmail.com';
       $mail->SMTPAuth = true;
-      $mail->Username = 'contact@example';
-      $mail->Password = 'your-password';
-      $mail->SMTPSecure = 'ssl';
-      $mail->Port = 465;
+      $mail->Username = 'arief.prasetyo911@gmail.com';
+      $mail->Password = 'hwpeygxpzgdqfxoe';
+      $mail->SMTPSecure = PHPMailer::ENCRIPTION_STARTTLS;
+      $mail->Port = 587;
 
-      //email content
+      //sender and recipient
       $mail->setFrom($email, $name);
-      $mail->addAddress('contact@example.com');
+      $mail->addAddress('arief.prasetyo911@gmail.com');
+      //email content
       $mail->isHTML(true);
       $mail->Subject = $subject;
       $mail->Body = "
